@@ -237,15 +237,15 @@ while [ 1 ]; do
 	read -r -s -n 1 C
 
 	case $C in
-	"h") # Left
-		# we are traversing "backwards", so instruct search directory to occur
+	"a") # Left
+        # we are traversing "backwards", so instruct search directory to occur
 		search_dir=1
 		builtin cd ..
 		level=0
 		scroll_pos=0
 		;;
 
-	"j") # Down
+	"s") # Down
 		level=$((level+1))
 		clear_dir=0
 		redraw=0
@@ -256,7 +256,7 @@ while [ 1 ]; do
 		fi
 		;;
 
-	"k") # Up
+	"w") # Up
 		level=$((level-1))
 		dbg="$dbg\nHitting down: $level"
 		clear_dir=0
@@ -268,7 +268,7 @@ while [ 1 ]; do
 		fi
 		;;
 
-	"l") # Right
+	"d") # Right
 		enter_dir="$current_dir/${dirs[$level]}"
 		if [ "$current_dir" == "/" ]; then
 			enter_dir="/${dirs[$level]}"
