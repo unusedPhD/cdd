@@ -16,9 +16,9 @@ Drop `cdd.sh` somewhere onto your filesystem and add the following alias to your
 
 The following stdin input options are available:
 
-    h - Navigate to the parent directory
-    j - Move the directory selection down
-    k - Move the directory selection up
-    l - Enter the selected directory
+    a - Navigate to the parent directory
+    s - Move the directory selection down
+    w - Move the directory selection up
+    d - Enter the selected directory
     ESC | q - Exit cdd without changing the current directory
     Enter - Exit cdd at the current directory
